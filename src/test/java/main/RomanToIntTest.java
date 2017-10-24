@@ -60,7 +60,7 @@ public class RomanToIntTest {
         List<String> generatedList = romanToInt.splitString(givenString);
 
         //then
-       // Assert.assertEquals(expectedList, generatedList);
+        Assert.assertEquals(expectedList, generatedList);
     }
 
 }
