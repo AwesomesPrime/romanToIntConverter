@@ -1,7 +1,11 @@
 package main;
 
 import jdk.nashorn.internal.runtime.ECMAException;
+import org.junit.Assert;
 import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.Assert.*;
 
@@ -9,6 +13,8 @@ import static org.junit.Assert.*;
  * Created by joel_thinkpad on 24.10.2017.
  */
 public class RomanToIntTest {
+
+    RomanToInt romanToInt = new RomanToInt();
 
     //Toplevel test for application
     @Test
@@ -35,6 +41,26 @@ public class RomanToIntTest {
 
         //then
 
+    }
+
+
+    //Gerüsttest für splitter logik welche in application Test benötigt wird ( kann anschließend entfernt werden,
+    // wenn schnittstelle klar steht)
+    @Test
+    public void testStringSplit() throws Exception{
+        //given
+
+        String givenString =  "VI";
+        List<String> expectedList = new ArrayList<String>();
+        expectedList.add("V");
+        expectedList.add("I");
+
+        //when
+
+        List<String> generatedList = romanToInt.splitString(givenString);
+
+        //then
+       // Assert.assertEquals(expectedList, generatedList);
     }
 
 }
