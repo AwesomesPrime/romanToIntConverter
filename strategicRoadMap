@@ -1,0 +1,30 @@
+vorgehen zum spliten von bsp MXCVI:
+
+    PRÄMISE: Eingabe sind nur valide römische Zahlen und max 3 -> KEINE VALIDIERUNG
+
+        1) eingelesenen string in einzelne chars
+                MXCVI -> [M, X, C, V, I]
+        -> splitter
+
+        2) umwandeln des arrays [M, X, C, V, I] in arabische zahlen
+               [M, X, C, V, I] -> [1000, 10, 100, 5, 1]
+         -> translation
+Symbol	I	V	X	L	C	D	M
+Value	1	5	10	50	100	500	1,000
+
+        3) anwenden von rechenlogik
+                aufeinanderfolgende zaheln in absteigender größe summieren,
+                kleinere zahlen subtrahieren
+
+        -> calculation
+
+Kleine test für jede Aufgabe seperat mit leichten problemen(Gerüsttest)
+
+1) MV als string einlesen und eine liste erhalten
+2) [V, I] in [5, 1] umwandeln
+3a) [10, 5, 1] addieren
+3b)[ 5, 100, 1, 1] berechnen
+
+
+
+
