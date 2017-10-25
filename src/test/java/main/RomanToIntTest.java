@@ -11,8 +11,7 @@ import java.util.List;
  */
 public class RomanToIntTest {
 
-    RomanToInt romanToInt = new RomanToInt();
-    Main main = new Main();
+    private RomanToInt romanToInt = new RomanToInt();
 
     //Toplevel test for application
     @Test
@@ -22,7 +21,7 @@ public class RomanToIntTest {
         int expectedInt = 1096;
 
         //when
-        int generatedInt = main.romanToInt(romNumb);
+        int generatedInt = romanToInt.romanToInt(romNumb);
 
         //then
         Assert.assertEquals(expectedInt, generatedInt);
@@ -37,7 +36,7 @@ public class RomanToIntTest {
         int expectedInt = 1877;
 
         //when
-        int generatedInt = main.romanToInt(romNumb);
+        int generatedInt = romanToInt.romanToInt(romNumb);
 
         //then
         Assert.assertEquals(expectedInt, generatedInt);

@@ -7,10 +7,20 @@ import java.util.List;
 /**
  * Created by joel_thinkpad on 24.10.2017.
  */
-public class RomanToInt {
+class RomanToInt {
 
 
-    public List<String> splitString(String givenString) {
+    int romanToInt(String roman) throws Exception {
+        int arabic;
+
+        List<String> stringList = splitString(roman);
+        List<Integer> integerList = translateListToInt(stringList);
+        arabic = calculate(integerList);
+        return arabic;
+    }
+
+
+    List<String> splitString(String givenString) {
         List<String> stringList = new ArrayList<>();
 
         String [] parts = givenString.split("");
@@ -19,7 +29,7 @@ public class RomanToInt {
         return stringList;
     }
 
-    public List<Integer> translateListToInt(List<String> givenStringList) throws Exception {
+    List<Integer> translateListToInt(List<String> givenStringList) throws Exception {
         List<Integer> integerList = new ArrayList<>();
         for (String roman : givenStringList) {
             switch (roman) {
@@ -54,7 +64,7 @@ public class RomanToInt {
     }
 
     //TODO refactoring!!!
-    public int calculate(List<Integer> integerList) {
+    int calculate(List<Integer> integerList) {
         int result =0;
         int listSize = integerList.size();
         for (int i=0; i < integerList.size(); i++) {
