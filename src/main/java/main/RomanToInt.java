@@ -53,29 +53,26 @@ public class RomanToInt {
         return integerList;
     }
 
+    //TODO refactoring!!!
     public int calculate(List<Integer> integerList) {
-        int num =0;
-
+        int result =0;
+        int listSize = integerList.size();
         for (int i=0; i < integerList.size(); i++) {
-            if(integerList.size() == i){
-                num += integerList.get(i);
 
-            }
-
-            int followingNum = i+1;
-            if(integerList.get(i) < integerList.get(followingNum)){
-                num = integerList.get(followingNum) - integerList.get(i);
+            int number = integerList.get(i);
+            //check if i ist last in list
+            if(i<listSize-1){
+                int followNumber = integerList.get(i+1);
+                if(number < followNumber){
+                    result=(followNumber-number)+result;
+                    i++;
+                } else {
+                    result+=number;
+                }
             } else {
-
+                result+=number;
             }
-
         }
-
-     /*   for(int number : integerList) {
-            if(number >= )
-            num = num + number;
-        }*/
-
-        return num;
+        return result;
     }
 }

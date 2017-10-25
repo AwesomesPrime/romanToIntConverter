@@ -12,6 +12,7 @@ import java.util.List;
 public class RomanToIntTest {
 
     RomanToInt romanToInt = new RomanToInt();
+    Main main = new Main();
 
     //Toplevel test for application
     @Test
@@ -21,9 +22,10 @@ public class RomanToIntTest {
         int expectedInt = 1096;
 
         //when
+        int generatedInt = main.romanToInt(romNumb);
 
         //then
-
+        Assert.assertEquals(expectedInt, generatedInt);
     }
 
 
@@ -35,8 +37,10 @@ public class RomanToIntTest {
         int expectedInt = 1877;
 
         //when
+        int generatedInt = main.romanToInt(romNumb);
 
         //then
+        Assert.assertEquals(expectedInt, generatedInt);
 
     }
 
@@ -94,18 +98,20 @@ public class RomanToIntTest {
         Assert.assertEquals(sum, num);
     }
 
-  /*  @Test
+    @Test
     public void testCalculationRuleSubstraction() throws Exception {
         //GIVEN
         List<Integer> integerList = new ArrayList<>();
-        integerList.add(45);
+        integerList.add(1);
+        integerList.add(10);
+        integerList.add(99);
         integerList.add(100);
-        int sub = 55;
+        int sub = 10;
         //WHEN
         int num = romanToInt.calculate(integerList);
 
         //THEN
         Assert.assertEquals(sub, num);
-    }*/
+    }
 
 }
